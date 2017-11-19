@@ -1,3 +1,4 @@
 Django==1.9.2
 -e git+https://github.com/uw-it-aca/mdot.git#egg=mdot
--e git+https://github.com/uw-it-aca/mdot-developers/#egg=mdotdevs
+-e git+https://github.com/uw-it-aca/mdot-developers#egg=mdotdevs
+-e git+https://github.com/uw-it-aca/mdot-rest.git#egg=mdot_rest
