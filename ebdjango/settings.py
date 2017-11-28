@@ -138,7 +138,7 @@ STATICFILES_FINDERS = (
 
 COMPRESS_PRECOMPILERS = (('text/less', 'lessc {infile} {outfile}'),)
 COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = False
+COMPRESS_OFFLINE = True
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter',
     'compressor.filters.cssmin.CSSMinFilter'
