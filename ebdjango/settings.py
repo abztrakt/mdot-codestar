@@ -25,7 +25,7 @@ SECRET_KEY = 'CHANGE_ME'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mdot.aca-aws.s.uw.edu']
 
 
 # Application definition
