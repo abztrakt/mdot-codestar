@@ -136,10 +136,9 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-COMPRESS_ROOT = "/tmp/some/path/for/files"
 COMPRESS_PRECOMPILERS = (('text/less', 'lessc {infile} {outfile}'),)
-COMPRESS_ENABLED = False # True if you want to compress your development build
-COMPRESS_OFFLINE = False # True if you want to compress your build offline
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = False
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter',
     'compressor.filters.cssmin.CSSMinFilter'
