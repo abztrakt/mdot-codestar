@@ -8,4 +8,5 @@
 *.pyc
 
 # Django
+local.env
 db.sqlite3
