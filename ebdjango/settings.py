@@ -11,22 +11,27 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import environ
+
+# environ setup - the .env file will be looked for, if not found... environ
+# will use the specified defaults
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'Change_me_to_something_random')
+SECRET_KEY = env('SECRET_KEY', default='CHANGE_ME_IN_ENV_FILE')
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['localhost', 'mdot-dev.aca-aws.s.uw.edu']
-
 
 # Application definition
 
@@ -129,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #STATIC_ROOT = '/home/ec2-user/eb-virt/ebdjango/ebsrc/static'
-STATIC_ROOT = '/var/www/static'
+STATIC_ROOT = env('STATIC_ROOT', default='/var/www/static')
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -138,8 +143,6 @@ STATICFILES_FINDERS = (
 )
 
 COMPRESS_PRECOMPILERS = (('text/less', 'lessc {infile} {outfile}'),)
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter',
     'compressor.filters.cssmin.CSSMinFilter'
@@ -148,8 +151,11 @@ COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
 
+COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
+
 # devtools
-ACA_DEVTOOLS_ENABLED = True
+ACA_DEVTOOLS_ENABLED = env.bool('ACA_DEVTOOLS_ENABLED', default=False)
 
 # mobileesp
 from django_mobileesp.detector import mobileesp_agent as agent
@@ -163,4 +169,4 @@ DETECT_USER_AGENTS = {
 }
 
 # htmlmin
-HTML_MINIFY = True
+HTML_MINIFY = env.bool('HTML_MINIFY', default=True)

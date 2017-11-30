@@ -9,10 +9,13 @@
 .Python
 
 # Django
+.env
 local.env
 db.sqlite3
 share/
 src/
+static/CACHE
+
 
 # Virtualenv
 bin/

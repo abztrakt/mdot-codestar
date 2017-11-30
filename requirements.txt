@@ -1,4 +1,5 @@
 django<1.9rc1
+django-environ
 -e git+https://github.com/uw-it-aca/mdot.git#egg=mdot
 -e git+https://github.com/uw-it-aca/mdot-developers#egg=mdotdevs
 -e git+https://github.com/uw-it-aca/mdot-rest.git#egg=mdot_rest
