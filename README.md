@@ -11,7 +11,7 @@ This sample includes:
 
 * README.md - this file
 * ebdjango/ - this directory contains your Django project files
-* ebdjango/env.example - sample environ env file for local settings variables
+* ebdjango/settings/env.example - sample environ .env file for local settings
 * helloworld/ - this directory contains your Django application files
 * manage.py - this Python script is used to start your Django web application
 * static/ - this directory contains static web assets used by your application
@@ -48,7 +48,7 @@ AWS CodeStar user guide.
    necessary environment variables to suit your local development needs. You
    will also need to load the local environment files by running the source command:
 
-        $ cp ebdjango/env.example ebdjango/.env
+        $ cp ebdjango/settings/env.local ebdjango/settings/.env
 
 4. Activate the virtual environment:
 
@@ -60,7 +60,7 @@ AWS CodeStar user guide.
 
 6. Start the Django development server:
 
-        $ python manage.py runserver 0:8000
+        $ python manage.py runserver 0:8000 --settings=ebdjango.settings.local
 
 5. Open http://127.0.0.1:8000/ in a web browser to view your application.
 
