@@ -11,13 +11,12 @@ This sample includes:
 
 * README.md - this file
 * ebdjango/ - this directory contains your Django project files
+* ebdjango/env.example - sample environ env file for local settings variables
 * helloworld/ - this directory contains your Django application files
 * manage.py - this Python script is used to start your Django web application
 * static/ - this directory contains static web assets used by your application
 * .ebextensions/ - this directory contains the Django configuration file that
   allows AWS Elastic Beanstalk to deploy your Django application
-* sample.env - sample environment variables file used for local development
-
 
 Getting Started
 ---------------
@@ -44,13 +43,12 @@ AWS CodeStar user guide.
 
         $ virtualenv .
 
-3. Copy the sample.env into local.env. This is essential for running your
-   application locally. After copying the sample, edit the necessary environment
-   variables to suit your local development needs. You will also need to load
-   the local environment files by running the source command:
+3. Copy the env.example file into .env. This allows you set environment variables
+   for running your application locally. After copying the sample, edit the
+   necessary environment variables to suit your local development needs. You
+   will also need to load the local environment files by running the source command:
 
-        $ cp sample.env local.env
-        $ source local.env
+        $ cp ebdjango/env.example ebdjango/.env
 
 4. Activate the virtual environment:
 
