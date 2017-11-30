@@ -56,7 +56,7 @@ AWS CodeStar user guide.
 
 5. Install Python dependencies for this project:
 
-        $ pip install -r requirements.txt
+        $ pip install -r local-requirements.txt
 
 6. Start the Django development server:
 
