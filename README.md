@@ -30,24 +30,38 @@ To work on the sample code, you'll need to clone your project's repository to yo
 local computer. If you haven't, do that first. You can find instructions in the
 AWS CodeStar user guide.
 
-1. Create a Python virtual environment for your Django project. This virtual
+
+1. Clone this repository
+
+        $ git clone https://github.com/abztrakt/mdot-codestar
+        $ cd mdot-codestar
+
+2. Create a Python virtual environment for your Django project. This virtual
    environment allows you to isolate this project and install any packages you
    need without affecting the system Python installation. At the terminal, type
    the following command:
 
-        $ virtualenv .venv
+        $ virtualenv .
 
-2. Activate the virtual environment:
+3. Copy the sample.env into local.env. This is essential for running your
+   application locally. After copying the sample, edit the necessary environment
+   variables to suit your local development needs. You will also need to load
+   the local environment files by running the source command:
 
-        $ activate ./venv/bin/activate
+        $ cp sample.env local.env
+        $ source local.env
 
-3. Install Python dependencies for this project:
+4. Activate the virtual environment:
+
+        $ source bin/activate
+
+5. Install Python dependencies for this project:
 
         $ pip install -r requirements.txt
 
-4. Start the Django development server:
+6. Start the Django development server:
 
-        $ python manage.py runserver
+        $ python manage.py runserver 0:8000
 
 5. Open http://127.0.0.1:8000/ in a web browser to view your application.
 

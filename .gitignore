@@ -6,7 +6,19 @@
 
 # Python
 *.pyc
+.Python
 
 # Django
 local.env
 db.sqlite3
+share/
+src/
+
+# Virtualenv
+bin/
+include/
+lib/
+pip-selfcheck.json
+.venv
+venv/
+ENV/
