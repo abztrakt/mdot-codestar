@@ -16,6 +16,7 @@ This sample includes:
 * static/ - this directory contains static web assets used by your application
 * .ebextensions/ - this directory contains the Django configuration file that
   allows AWS Elastic Beanstalk to deploy your Django application
+* sample.env - sample environment variables file used for local development
 
 
 Getting Started
