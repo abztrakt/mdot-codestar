@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'SET_ME_IN_ENVIRONMENT')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'mdot-dev.aca-aws.s.uw.edu']
+ALLOWED_HOSTS = ['localhost', 'mdot.aca-aws.s.uw.edu', 'mdot-dev.aca-aws.s.uw.edu']
 
 # Application definition
 
