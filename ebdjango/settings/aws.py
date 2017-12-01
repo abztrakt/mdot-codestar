@@ -69,7 +69,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'mdot.context_processors.less_compiled',
                 'mdot.context_processors.google_analytics',
-                'mdot.context_processors.devtools_bar',
             ],
         },
     },
@@ -146,9 +145,6 @@ COMPRESS_JS_FILTERS = [
 
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
-
-# devtools
-ACA_DEVTOOLS_ENABLED = False
 
 # mobileesp
 from django_mobileesp.detector import mobileesp_agent as agent
