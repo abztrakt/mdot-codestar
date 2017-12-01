@@ -1,4 +1,4 @@
 django<1.9rc1
--e git+https://github.com/uw-it-aca/mdot.git@develop#egg=mdot
--e git+https://github.com/uw-it-aca/mdot-developers@develop#egg=mdotdevs
--e git+https://github.com/uw-it-aca/mdot-rest.git@develop#egg=mdot_rest
+-e git+https://github.com/uw-it-aca/mdot.git#egg=mdot
+-e git+https://github.com/uw-it-aca/mdot-developers#egg=mdotdevs
+-e git+https://github.com/uw-it-aca/mdot-rest.git#egg=mdot_rest
